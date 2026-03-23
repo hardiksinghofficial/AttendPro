@@ -4,10 +4,7 @@ public class GeolocationUtil {
 
     private static final double EARTH_RADIUS = 6371000; // meters
 
-    /**
-     * Calculate distance between two GPS coordinates using Haversine formula
-     * @return distance in meters
-     */
+   
     public static double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
         double dLat = Math.toRadians(lat2 - lat1);
         double dLon = Math.toRadians(lon2 - lon1);
@@ -21,9 +18,7 @@ public class GeolocationUtil {
         return EARTH_RADIUS * c;
     }
 
-    /**
-     * Check if location is within geofence
-     */
+  
     public static boolean isWithinGeofence(double userLat, double userLon,
                                            double officeLat, double officeLon,
                                            double radiusMeters) {
